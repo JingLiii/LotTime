@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <h1 class="logo">cnodejs Api Test</h1>
-    <button v-on:click="goContent">跳转到内容页面</button>
-    <nav></nav>
+  <!-- 首页 -->
+  <div class="app">
+    首页
   </div>
+  <!-- /首页 -->
 </template>
 
 <script>
+
 export default {
   data () {
     return {
       // lists: [],
-      navs: ['时光', '记录', '发现', '个人']
     }
   },
+  components: {},
   created () {
     // 组件创建完成后获取数据, 这里和1.0不一样, 改成了这个样子
     // this.get_data()
@@ -34,4 +35,5 @@ export default {
     }
   }
 }
+
 </script>

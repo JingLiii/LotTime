@@ -4,21 +4,44 @@ import user from '../frame/user.vue'
 import index from '../page/index.vue'
 import content from '../page/content.vue'
 
-// 引入子页面
+// 引入各个页面
+import time from '../page/time.vue'
+import found from '../page/found.vue'
+import record from '../page/record.vue'
+
+// 引入用户页面 _ 子页面
 import userIndex from '../page/user/index.vue'
 import userInfo from '../page/user/info.vue'
 import userLove from '../page/user/love.vue'
 
 // 配置路由
 export default [
+  // 首页 _ 直接加载index页面
   {
     path: '/',
     component: index
   },
+  // 测试 添加内容页面
   {
     path: '/content',
     component: content
   },
+  // 时光主页面
+  {
+    path: '/time',
+    component: time
+  },
+  // 发现页面
+  {
+    path: '/found',
+    component: found
+  },
+  // 记录页面
+  {
+    path: '/record',
+    component: record
+  },
+  // 用户页面
   {
     path: '/user',
     component: user,

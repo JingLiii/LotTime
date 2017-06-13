@@ -7,17 +7,21 @@
     transtion
     transtion-mode="out-in">
     </router-view>
+    <Nav></Nav>
   </div>
 </template>
 
 // JS
 <script>
+import Nav from '@/components/nav'
 export default {
-  components: {}
+  components: {
+    Nav
+  }
 }
 </script>
 
 // 样式
 <style lang="scss">
-  @import  "./style/style"
+  @import  "./style/style";
 </style>

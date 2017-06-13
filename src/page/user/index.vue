@@ -8,6 +8,3 @@
   }
 </script>
 
-// <style lang="scss">
-//   @import  '../../style/scss/user_index.scss'
-// </style>
