@@ -1,5 +1,5 @@
 <template>
 <div>
-  发现
+  记录
 </div>
 </template>
