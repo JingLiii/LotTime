@@ -17,6 +17,14 @@ import Nav from '@/components/nav'
 export default {
   components: {
     Nav
+  },
+  created: function () {
+    this.testFuc(this.$jQuery('#app'))
+  },
+  methods: {
+    testFuc: function (params) {
+      // console.log(params)
+    }
   }
 }
 </script>

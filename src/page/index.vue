@@ -7,7 +7,7 @@
 </template>
 
 <script>
-var axios = require('axios')
+// var axios = require('axios')
 export default {
   data () {
     return {
@@ -21,27 +21,21 @@ export default {
   },
   methods: {
     get_data: function () {
-      // console.log(axios)
-      // axios.get('http://api.jisuapi.com/tv/query?appkey=edb2c1897774b60c&tvid=435&date=2015-06-13')
-      axios.get('https://yesno.wtf/api')
-      // axios.post('http://www.tuling123.com/openapi/api', {
-      //   'key': '5933dd27ecd84599a8045202d22bc1da',
-      //   'info': 'nihao'
-      // })
-      .then(function (data) {
-        console.dir(data)
+      // console.log(this.$jQuery)
+      this.$jQuery.ajax({
+        url: 'http://api.jisuapi.com/train/station2s',
+        type: 'post',
+        dataType: 'jsonp',
+        data: {
+          appkey: 'edb2c1897774b60c',
+          start: '北京',
+          end: '上海',
+          ishigh: 0
+        },
+        success: function (data) {
+          console.log(data)
+        }
       })
-      .catch(function (err) {
-        console.dir(err)
-      })
-      // var _this = this
-      // var info = {
-      //   appkey: 'edb2c1897774b60c'
-      // }
-      // // 我们这里使用全局绑定的 $api方法来获取数据
-      // _this.$api.get('channel', info, function (data) {
-      //   console.log(data)
-      // })
     }
   }
 }

@@ -79,39 +79,39 @@
 // }
 
 // 配置API 接口地址: http://api.jisuapi.com/tv
-var root = 'http://api.jisuapi.com/tv'
+// var root = 'http://api.jisuapi.com/tv'
 
 // 引入 axios , 用来发送请求
-var axios = require('axios')
+// var axios = require('axios')
 
-function apiBase (method, root, url, params, success, fail) {
-  if (method.toLocaleLowerCase() === 'get') {
-    axios.get(root + '/' + url, {
-      params: params
-    })
-    .then(function (data) {
-      success(data)
-    })
-    .catch(function (err) {
-      fail(err)
-    })
-  } else if (method.toLocaleLowerCase() === 'post') {
-    axios.post(root + '/' + url, params)
-    .then(function (data) {
-      success(data)
-    })
-    .catch(function (err) {
-      fail(err)
-    })
-  }
-}
+// function apiBase (method, root, url, params, success, fail) {
+//   if (method.toLocaleLowerCase() === 'get') {
+//     axios.get(root + '/' + url, {
+//       params: params
+//     })
+//     .then(function (data) {
+//       success(data)
+//     })
+//     .catch(function (err) {
+//       fail(err)
+//     })
+//   } else if (method.toLocaleLowerCase() === 'post') {
+//     axios.post(root + '/' + url, params)
+//     .then(function (data) {
+//       success(data)
+//     })
+//     .catch(function (err) {
+//       fail(err)
+//     })
+//   }
+// }
 
-export default {
-  get: function (url, params, success, fail) {
-    apiBase('get', root, url, params, success, fail)
-  },
-  post: function (url, params, success, fail) {
-    apiBase('post', root, url, params, success, fail)
-  }
-}
+// export default {
+//   get: function (url, params, success, fail) {
+//     apiBase('get', root, url, params, success, fail)
+//   },
+//   post: function (url, params, success, fail) {
+//     apiBase('post', root, url, params, success, fail)
+//   }
+// }
 

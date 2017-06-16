@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <title></title>
+  <link rel="shortcut" href="favicon.ico">
+  <meta name="zhangrh" content="zhangrhweb@163.com">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+  <title>LotTime</title>
+  <link rel="shortcut icon" href="http://orkt3rket.bkt.clouddn.com/favicon.ico">
 </head>
 
 <body>
@@ -12,5 +15,19 @@
   <!-- built files will be auto injected -->
   <!--<script type=text/javascript src=cordova.js></script>-->
 </body>
-
+<script>
+  // 传入一个数字, 和 1
+  function getOrder(num, i = 1) {
+    // 判断传入的这个数字, 是否小于1
+    if (num < 1) {
+      // 如果小于1的话, 就让这个数字乘个10, 然后让 i 变成0.1传入.
+      // 然后还小于1的话, 就继续让num 传入, 并且
+      return getOrder(num * 10, i / 10)
+    } else if (num < 10) {
+      return i
+    } else {
+      return getOrder(num / 10, i * 10)
+    }
+  }
+</script>
 </html>

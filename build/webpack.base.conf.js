@@ -3,6 +3,9 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
+// 加入 jquery, bootstrap 时所添加
+var webpack = require('webpack');
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -22,7 +25,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'bootstrap':resolve('src/assets/bootstrap'),
     }
   },
   module: {
@@ -63,5 +67,12 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery'
+    })
+  ]
 }
