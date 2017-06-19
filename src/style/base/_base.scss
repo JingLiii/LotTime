@@ -22,9 +22,11 @@ h5,
 h6,
 a,
 p,
+i,
 div,
 span,
-input {
+input,
+{
   color: #666;
   // 用用简书的字体, 看看效果如何
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
@@ -34,6 +36,8 @@ a,
 p,
 div,
 span,
-input {
+input,
+i, 
+{
   font-size: 14px;
 }

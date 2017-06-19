@@ -1,13 +1,19 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-// 引入依赖的包
-import jQuery from 'jquery'
-import 'font-awesome/css/font-awesome.css'
-
-// import '../node_modules/bootstrap/dist/js/bootstrap.min'
-
 // 引入Vue
 import Vue from 'vue'
+
+// 引入依赖的包
+import $ from 'jquery'
+import '../node_modules/bootstrap/dist/js/bootstrap.min'
+
+// 引入字体图标
+import Icon from './components/Icon.vue'
+import './icons/index'
+
+// 使用字体图标
+Vue.component('icon', Icon)
+
 // 引入路由
 import VueRouter from 'vue-router'
 // 使用路由
@@ -26,7 +32,7 @@ import api from './config/api'
 // 将API方法绑定到全局
 Vue.prototype.$api = api
 
-Vue.prototype.$jQuery = jQuery
+Vue.prototype.$jQuery = $
 
 /* eslint-disable no-new */
 // 运行起来

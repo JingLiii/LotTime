@@ -1,6 +1,7 @@
 <template>
   <ul class="navs">
       <li @click="goPage(index)" class="nav" v-for="(nav, index) in navs" >
+        <icon class="icon" v-if="nav.awesomeIcon" v-bind:name="nav.awesomeIcon"></icon>
         <i v-bind:class="nav.icon">{{nav.text}}</i>
       </li>
   </ul>
@@ -26,7 +27,8 @@ export default {
         },
         {
           text: '个人',
-          icon: 'icon-cloud-download'
+          awesomeIcon: 'user'
+          // icon: 'chevron-right'
         }
       ]
     }
@@ -76,6 +78,10 @@ export default {
     line-height: 80px;
     border-radius:3%;
     border: solid 1px #ddd;
+    .icon{
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 </style>
