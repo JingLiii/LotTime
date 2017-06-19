@@ -7,16 +7,16 @@
     transtion
     transtion-mode="out-in">
     </router-view>
-    <Nav></Nav>
+    <myNav></myNav>
   </div>
 </template>
 
 // JS
 <script>
-import Nav from '@/components/nav'
+import myNav from '@/components/myNav'
 export default {
   components: {
-    Nav
+    myNav
   },
   created: function () {
     this.testFuc(this.$jQuery('#app'))

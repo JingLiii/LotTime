@@ -1,2 +1,5 @@
 import './chevron-right.js'
 import './user.js'
+import './umbrella'
+import './pencil'
+import './twitter'

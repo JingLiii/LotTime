@@ -1,8 +1,8 @@
 <template>
   <ul class="navs">
-      <li @click="goPage(index)" class="nav" v-for="(nav, index) in navs" >
+      <li @click="goPage(index)" class="main-nav" v-for="(nav, index) in navs" >
         <icon class="icon" v-if="nav.awesomeIcon" v-bind:name="nav.awesomeIcon"></icon>
-        <i v-bind:class="nav.icon">{{nav.text}}</i>
+        <span>{{nav.text}}</span>
       </li>
   </ul>
 </template>
@@ -15,20 +15,19 @@ export default {
       navs: [
         {
           text: '时光',
-          icon: 'glyphicon glyphicon-apple'
+          awesomeIcon: 'umbrella'
         },
         {
           text: '记录',
-          icon: 'glyphicon glyphicon-pencil'
+          awesomeIcon: 'pencil'
         },
         {
           text: '发现',
-          icon: 'glyphicon glyphicon-globe'
+          awesomeIcon: 'twitter'
         },
         {
           text: '个人',
           awesomeIcon: 'user'
-          // icon: 'chevron-right'
         }
       ]
     }
@@ -69,18 +68,31 @@ export default {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  .nav{
+  .main-nav{
     width: 25%;
-    height: 80px;
-    background: $base-color;
-    font-size: 36px;
+    height: (80rem/22);
+    background: #ddd;
+    cursor: pointer;
     text-align: center;
-    line-height: 80px;
-    border-radius:3%;
-    border: solid 1px #ddd;
-    .icon{
-      width: 30px;
-      height: 30px;
+    line-height: (105rem/22);
+    position: relative;
+    &:hover{
+      .icon {
+        color: $base_color;
+      }
+      span {
+        color: $base_color;
+      }
+    }
+    .icon {
+      position: absolute;
+      top: 20%;
+      margin-left: (4rem/22);
+      width: (22rem/22);
+      height: (22rem/22);
+    }
+    span {
+      font-size: (14rem/22);
     }
   }
 }
