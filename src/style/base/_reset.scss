@@ -64,16 +64,16 @@ textarea {
 }
 
 h1 {
-  font-size: 18px;
+  font-size: (18rem/16);
   /* 18px / 12px = 1.5 */
 }
 
 h2 {
-  font-size: 16px;
+  font-size: (16rem/16);
 }
 
 h3 {
-  font-size: 14px;
+  font-size: (14rem/16);
 }
 
 h4,
@@ -105,7 +105,7 @@ tt {
 /* 统一等宽字体 */
 
 small {
-  font-size: 12px;
+  font-size: (12rem/16);
 }
 
 

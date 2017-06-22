@@ -1,5 +1,5 @@
 <template>
-  <svg version="1.1" :class="clazz" :role="label ? 'img' : 'presentation'" :aria-label="label" :x="x" :y="y" :width="width" :height="height" :viewBox="box" :style="style">
+  <svg version="1.1" :class="clazz" :role="label ? 'img' : 'presentation'" :aria-label="label" :x="x" :y="y"  :viewBox="box" :style="style">
     <slot>
       <template v-if="icon && icon.paths">
         <path v-for="path in icon.paths" v-bind="path"/>

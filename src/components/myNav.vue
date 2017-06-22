@@ -70,11 +70,11 @@ export default {
   justify-content: space-around;
   .main-nav{
     width: 25%;
-    height: (80rem/22);
+    height: (50rem/16);
     background: #ddd;
     cursor: pointer;
     text-align: center;
-    line-height: (105rem/22);
+    line-height: (75rem/16);
     position: relative;
     &:hover{
       .icon {
@@ -86,13 +86,13 @@ export default {
     }
     .icon {
       position: absolute;
-      top: 20%;
-      margin-left: (4rem/22);
-      width: (22rem/22);
-      height: (22rem/22);
+      top: 22%;
+      margin-left: (4rem/16);
+      width: (16rem/16);
+      height: (16rem/16);
     }
     span {
-      font-size: (14rem/22);
+      font-size: (12rem/16);
     }
   }
 }
