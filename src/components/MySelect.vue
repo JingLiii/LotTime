@@ -2,10 +2,12 @@
   <div class="box">
       <div class="ulBtn" @click="ulToggle">
         <span>{{chooseData}}</span>
-        <icon @click="test" class="icon" v-bind:name="IconName"></icon>
+        <icon class="icon" v-bind:name="IconName"></icon>
       </div>
       <ul v-show="ulShow">
-        <li @click="changeChooseData(item)" v-for="item in options" :vlaue="item">{{item}}</li>
+        <li v-for="item in options" @click="changeChooseData(item)">
+          {{item}}
+        </li>
       </ul>
   </div>
 </template>

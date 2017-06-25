@@ -18,6 +18,10 @@ export default {
   components: {
     myNav
   },
+  // beforeCreate () {
+  //   // alert('dddd')
+  //   document.addEventListener('deviceready', this.onDeviceReady.bind(this), false)
+  // },
   created: function () {
     this.testFuc(this.$jQuery('#app'))
   },
@@ -25,6 +29,9 @@ export default {
     testFuc: function (params) {
       // console.log(params)
     }
+    // onDeviceReady: function () {
+    //   alert('onDeviceReady')
+    // }
   }
 }
 </script>
