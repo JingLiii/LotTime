@@ -5,7 +5,7 @@
         <icon class="icon" v-bind:name="IconName"></icon>
       </div>
       <ul v-show="ulShow">
-        <li v-for="item in options" @click="changeChooseData(item)">
+        <li v-for="item in options" :key="item" @click="changeChooseData(item)">
           {{item}}
         </li>
       </ul>

@@ -1,37 +1,49 @@
 // 组件
 <template>
   <div id="app">
+    <MyHeader :title="title"></MyHeader>
     <router-view
     class="view"
     kepp-alive
     transtion
     transtion-mode="out-in">
     </router-view>
-    <myNav></myNav>
+    <myNav v-on:goPage="navChange"></myNav>
   </div>
 </template>
 
 // JS
 <script>
 import myNav from '@/components/myNav'
+import MyHeader from '@/components/MyHeader'
+
 export default {
   components: {
-    myNav
+    myNav,
+    MyHeader
   },
-  // beforeCreate () {
-  //   // alert('dddd')
-  //   document.addEventListener('deviceready', this.onDeviceReady.bind(this), false)
-  // },
+  data () {
+    return {
+      title: ''
+    }
+  },
   created: function () {
-    this.testFuc(this.$jQuery('#app'))
+    // 使用jQuery的方法
+    // this.testFuc(this.$jQuery('#app'))
+    this.navChange(0)
   },
   methods: {
-    testFuc: function (params) {
-      // console.log(params)
+    navChange: function (index) {
+      if (index === 0) {
+        this.title = '往日时光'
+      } else if (index === 1) {
+        this.title = '记录生活'
+      } else if (index === 2) {
+        this.title = '发现'
+      } else if (index === 3) {
+        this.title = '个人中心'
+      }
     }
-    // onDeviceReady: function () {
-    //   alert('onDeviceReady')
-    // }
   }
 }
 </script>
