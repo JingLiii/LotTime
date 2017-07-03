@@ -1,6 +1,6 @@
 <template>
   <ul class="navs">
-      <li @click="goPage(index)" class="main-nav" v-for="(nav, index) in navs" >
+      <li @click="goPage(index)" :key="nav.text" class="main-nav" v-for="(nav, index) in navs" >
         <icon class="icon" v-if="nav.awesomeIcon" v-bind:name="nav.awesomeIcon"></icon>
         <span>{{nav.text}}</span>
       </li>
@@ -70,12 +70,12 @@ export default {
   justify-content: space-around;
   .main-nav{
     width: 25%;
-    height: (50rem/16);
-    background: #ddd;
+    height: (40rem/14);
+    background: #fff;
     cursor: pointer;
     text-align: center;
-    line-height: (75rem/16);
-    position: relative;
+    line-height: (68rem/14);
+    position: relative; 
     &:hover{
       .icon {
         color: $base_color;
@@ -86,13 +86,13 @@ export default {
     }
     .icon {
       position: absolute;
-      top: 22%;
-      margin-left: (4rem/16);
-      width: (16rem/16);
-      height: (16rem/16);
+      top: 20%;
+      margin-left: (3rem/14);
+      width: (18rem/14);
+      height: (18rem/14);
     }
     span {
-      font-size: (12rem/16);
+      font-size: (12rem/14);
     }
   }
 }

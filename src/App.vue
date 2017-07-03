@@ -39,4 +39,7 @@ export default {
 // 样式
 <style lang="scss">
   @import  "./style/style";
+  body{
+    background-color: #f2f2f2;
+  }
 </style>
