@@ -60,37 +60,37 @@
   height: (40rem/22);
   position: relative;
   .ulBtn{
+    outline: none;
+    background: none;
     width: (150rem/22);
     height: (40rem/22);
-    background: none;
-    outline: none;
-    border: solid (1rem/22) #666;
     text-align: center;
     line-height: (40rem/22);
+    border: solid (1rem/22) #666;
     .icon{
-      position: absolute;
       top: (6rem/16);
       right: (10rem/16);
       width: (16rem/16);
       height: (16rem/16);
+      position: absolute;
     }
   }
   ul{
-    width: 100%;
-    position: absolute;
     top: 100%;
+    width: 100%;
     background: #fff;
+    position: absolute;
     border-left: solid 1px #ddd;
     border-right: solid 1px #ddd;
     li{
-      text-align: center;
       width: 100%;
-      border-bottom: solid 1px #ddd;
       height: (28rem/16);
+      text-align: center;
       line-height: (30rem/16);
+      border-bottom: solid 1px #ddd;
       &:hover{
-        background-color: $base_color;
         color: #fff;
+        background-color: $base_color;
       }
     }
   }

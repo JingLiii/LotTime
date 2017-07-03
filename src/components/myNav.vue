@@ -64,20 +64,20 @@ export default {
 @import '../style/base/_color.scss';
 
 .navs{
-  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   flex-flow: row;
+  position: fixed;
   justify-content: space-around;
   .main-nav{
     width: 25%;
-    height: (40rem/14);
-    background: #fff;
     cursor: pointer;
+    background: #fff;
+    height: (40rem/14);
     text-align: center;
-    line-height: (68rem/14);
     position: relative; 
+    line-height: (68rem/14);
     &:hover{
       .icon {
         color: $base_color;
@@ -87,11 +87,11 @@ export default {
       }
     }
     .icon {
-      position: absolute;
       top: 20%;
-      margin-left: (3rem/14);
       width: (18rem/14);
       height: (18rem/14);
+      position: absolute;
+      margin-left: (3rem/14);
     }
     span {
       font-size: (12rem/14);
