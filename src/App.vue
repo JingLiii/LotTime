@@ -9,6 +9,7 @@
     transtion-mode="out-in">
     </router-view>
     <myNav v-on:goPage="navChange"></myNav>
+    <!--<img src="./img/background.jpg" alt="">-->
   </div>
 </template>
 
@@ -53,5 +54,6 @@ export default {
   @import  "./style/style";
   body{
     background-color: #f2f2f2;
+    // background-image: url('./img/background.jpg');
   }
 </style>

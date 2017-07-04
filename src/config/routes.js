@@ -1,8 +1,8 @@
 // 引入子路由
 import user from '../frame/user.vue'
+
 // 引入模板
 import index from '../page/index.vue'
-import content from '../page/content.vue'
 
 // 引入各个页面
 import time from '../page/time.vue'
@@ -20,11 +20,6 @@ export default [
   {
     path: '/',
     component: index
-  },
-  // 测试 添加内容页面
-  {
-    path: '/content',
-    component: content
   },
   // 时光主页面
   {

@@ -1,18 +1,52 @@
 <template>
   <div>
-    记录
-    <!--<icon name="chevron-right"></icon>-->
-    <input type="text" v-model="msg">
-    {{msg}}
+    <RecordBox 
+      v-for="box in Boxs"
+      :key="box.title"
+      :title="box.title"
+      :content="box.content"
+      :img="box.imgUrl"
+      class="record_box"
+    >
+    </RecordBox>
   </div>
 </template>
 
 <script>
+import RecordBox from '../components/RecordBox'
+
+import img from '../config/images.js'
+
 export default {
-  data: function () {
+  components: {
+    RecordBox
+  },
+  data () {
     return {
-      msg: '<dd></dd>'
+      Boxs: [
+        {
+          title: '摄影',
+          imgUrl: img.head01,
+          content: '一张照片记录你的美好点滴'
+        },
+        {
+          title: '视频',
+          imgUrl: img.head02,
+          content: '生活每一步'
+        },
+        {
+          title: '描述',
+          imgUrl: img.background,
+          content: '窗外.. 雨天.. 音乐.. 纸张..'
+        }
+      ]
     }
   }
 }
 </script>
+
+<style lang="scss">
+.record_box {
+  margin: (15rem/14) auto;
+}
+</style>

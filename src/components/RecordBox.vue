@@ -1,23 +1,20 @@
 <template>
   <div class="outer clearfix">
     <div class="left">
-      <img v-bind:src="imgUrl" alt="">
+      <img v-bind:src="img" alt="">
     </div>
     <div class="right">
-      摄影
+      {{title}}
+      <p>{{content}}</p>
     </div>
-      <img src="../images/background.jpg" alt="">
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'TimeBox',
-  data () {
-    return {
-      imgUrl: '../images/background.jpg'
-    }
-  }
+  name: 'RecordBox',
+  props: ['title', 'img', 'content']
 }
 </script>
 
@@ -48,8 +45,11 @@ export default {
     color: #666;
     float: left;
     height: 100%;
-    font-size: 24px;
-    line-height: (70rem/14);
+    font-size: 20px;
+    padding: (18rem/14) 0 0 0;
+    p{
+      margin: (6rem/14) 0 0 0;
+    }
   }
 }
 </style>
