@@ -1,6 +1,7 @@
 // 组件
 <template>
   <div id="app">
+    <Shelter v-show="shelterController"></Shelter>
     <MyHeader :title="title"></MyHeader>
     <router-view
     class="view"
@@ -9,7 +10,6 @@
     transtion-mode="out-in">
     </router-view>
     <myNav v-on:goPage="navChange"></myNav>
-    <!--<img src="./img/background.jpg" alt="">-->
   </div>
 </template>
 
@@ -17,21 +17,33 @@
 <script>
 import myNav from '@/components/myNav'
 import MyHeader from '@/components/MyHeader'
+import Shelter from '@/components/Shelter'
 
 export default {
   components: {
     myNav,
-    MyHeader
+    MyHeader,
+    Shelter
   },
   data () {
     return {
-      title: ''
+      title: '',
+      // 控制是否出现遮挡层
+      shelterController: true
     }
   },
+  beforeCreate: function () {
+    alert(1)
+    document.addEventListener('deviceready', function () {
+      alert('dd')
+    }, false)
+  },
   created: function () {
-    // 使用jQuery的方法
-    // this.testFuc(this.$jQuery('#app'))
-    this.navChange(0)
+    // 视图构建完成, 设备链接完成后, 去掉遮挡层
+    alert(2)
+    document.addEventListener('deviceready', function () {
+      alert('aa')
+    }, false)
   },
   methods: {
     navChange: function (index) {

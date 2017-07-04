@@ -26,17 +26,17 @@ export default {
       Boxs: [
         {
           title: '摄影',
-          imgUrl: img.head01,
+          imgUrl: img.cameraReal,
           content: '一张照片记录你的美好点滴'
         },
         {
           title: '视频',
-          imgUrl: img.head02,
+          imgUrl: img.dvReal,
           content: '生活每一步'
         },
         {
           title: '描述',
-          imgUrl: img.background,
+          imgUrl: img.penReal,
           content: '窗外.. 雨天.. 音乐.. 纸张..'
         }
       ]
@@ -48,5 +48,6 @@ export default {
 <style lang="scss">
 .record_box {
   margin: (15rem/14) auto;
+  cursor: pointer;
 }
 </style>
