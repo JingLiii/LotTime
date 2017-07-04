@@ -1,7 +1,5 @@
-// 引入子路由
-import user from '../frame/user.vue'
-
 // 引入各个页面
+import user from '../page/user.vue'
 import time from '../page/time.vue'
 import found from '../page/found.vue'
 import record from '../page/record.vue'
@@ -13,9 +11,7 @@ import userLove from '../page/user/love.vue'
 
 // 配置路由
 export default [
-  // 首页 _ 直接加载time页面
-
-  // 时光主页面
+  // 主页面 - 时光页
   {
     path: '/',
     component: time

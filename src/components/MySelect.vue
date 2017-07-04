@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="my-select">
       <div class="ulBtn" @click="ulToggle">
         <span>{{chooseData}}</span>
         <icon class="icon" v-bind:name="IconName"></icon>
@@ -55,7 +55,7 @@
 
 @import '../style/base/_color.scss';
 
-.box{
+.my-select{
   width: (150rem/22);
   height: (40rem/22);
   position: relative;

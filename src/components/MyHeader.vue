@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="my-header">
     {{title}}
   </header>
 </template>
@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss">
 @import '../style/base/_color.scss';
-header {
+.my-header {
   width: 100%;
   color: #eee;
   text-align: center;

@@ -1,5 +1,5 @@
 <template>
-  <ul class="navs">
+  <ul class="my-navs">
       <li @click="goPage(index)" :key="nav.text" class="main-nav" v-for="(nav, index) in navs" >
         <icon class="icon" v-if="nav.awesomeIcon" v-bind:name="nav.awesomeIcon"></icon>
         <span>{{nav.text}}</span>
@@ -63,7 +63,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/base/_color.scss';
 
-.navs{
+.my-navs{
   bottom: 0;
   width: 100%;
   display: flex;

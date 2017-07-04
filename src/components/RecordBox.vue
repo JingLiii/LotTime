@@ -1,9 +1,9 @@
 <template>
-  <div class="outer clearfix">
-    <div class="left">
+  <div class="record-box clearfix">
+    <div class="record-box-left">
       <img v-bind:src="img" alt="">
     </div>
-    <div class="right">
+    <div class="record-box-right">
       {{title}}
       <p>{{content}}</p>
     </div>
@@ -19,12 +19,12 @@ export default {
 </script>
 
 <style lang="scss">
-.outer{
+.record-box{
   width: 92%;
   background: #fff;
   height: (70rem/14);
   border-radius: (3rem/14);
-  .left{
+  .record-box-left{
     float: left;
     width: (70rem/14);
     height: (70rem/14);
@@ -40,7 +40,7 @@ export default {
       margin-left: (-15rem/14);
     }
   }
-  .right{
+  .record-box-right{
     width: 60%;
     color: #666;
     float: left;

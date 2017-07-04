@@ -64,6 +64,7 @@ export default {
 <style lang="scss">
   @import  "./style/style";
   body{
+    height: 3000px;
     background-color: #f2f2f2;
     // background-image: url('./img/background.jpg');
   }
