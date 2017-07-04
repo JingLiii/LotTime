@@ -1,9 +1,6 @@
 // 引入子路由
 import user from '../frame/user.vue'
 
-// 引入模板
-import index from '../page/index.vue'
-
 // 引入各个页面
 import time from '../page/time.vue'
 import found from '../page/found.vue'
@@ -16,14 +13,11 @@ import userLove from '../page/user/love.vue'
 
 // 配置路由
 export default [
-  // 首页 _ 直接加载index页面
-  {
-    path: '/',
-    component: index
-  },
+  // 首页 _ 直接加载time页面
+
   // 时光主页面
   {
-    path: '/time',
+    path: '/',
     component: time
   },
   // 发现页面

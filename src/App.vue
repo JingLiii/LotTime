@@ -29,21 +29,20 @@ export default {
     return {
       title: '',
       // 控制是否出现遮挡层
-      shelterController: true
+      // todo: 跑在安卓时, 需要改为true
+      shelterController: false
     }
   },
-  beforeCreate: function () {
-    alert(1)
-    document.addEventListener('deviceready', function () {
-      alert('dd')
-    }, false)
-  },
   created: function () {
+    var _this = this
     // 视图构建完成, 设备链接完成后, 去掉遮挡层
-    alert(2)
     document.addEventListener('deviceready', function () {
-      alert('aa')
+      setTimeout(function () {
+        _this.shelterController = false
+      }, 1000)
     }, false)
+    // 页面加载完成后, 直接加载时光页面
+    this.navChange(0)
   },
   methods: {
     navChange: function (index) {

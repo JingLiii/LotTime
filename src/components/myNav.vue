@@ -36,7 +36,7 @@ export default {
     goPage: function (index) {
       if (index === 0) {
         this.$router.push({
-          path: '/time'
+          path: '/'
         })
       } else if (index === 1) {
         this.$router.push({
