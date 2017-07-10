@@ -53,7 +53,6 @@ export default {
       } else {
         alert('进行错误跳转: ' + index)
       }
-      // alert(index)
       this.$emit('goPage', index)
     }
   }
