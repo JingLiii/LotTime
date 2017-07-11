@@ -25,6 +25,9 @@
     html {font-size: 28px;}
 }
 
+@media screen and (min-width: 720px) {
+    html {font-size: 30px;}
+}
 // 做个适配, 让PC看起来舒服些
 @media screen and (min-width: 750px) {
     html {font-size: 32px;}

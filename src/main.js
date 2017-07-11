@@ -34,6 +34,14 @@ Vue.prototype.$api = api
 
 Vue.prototype.$jQuery = $
 
+// 引入绑定安卓方法
+import android from './config/android'
+Vue.prototype.$android = android
+
+// 工具函数
+import tools from './config/tools'
+Vue.prototype.$tools = tools
+
 /* eslint-disable no-new */
 // 运行起来
 new Vue({

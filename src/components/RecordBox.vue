@@ -1,5 +1,5 @@
 <template>
-  <div class="record-box clearfix">
+  <div @click="event" class="record-box clearfix">
     <div class="record-box-left">
       <img v-bind:src="img" alt="">
     </div>
@@ -14,7 +14,33 @@
 
 export default {
   name: 'RecordBox',
-  props: ['title', 'img', 'content']
+  props: ['title', 'img', 'content', 'eventName'],
+  methods: {
+    event: function (par) {
+      // 这里的参数, 是鼠标的对象
+      if (this.eventName === 'tackPic') {
+        // 调起摄像头, 开始拍照
+        this.tackPic()
+      } else if (this.eventName === 'tackVideo') {
+        this.tackVideo()
+      } else if (this.eventName === 'tackText') {
+        this.tackText()
+      }
+    },
+    tackPic: function () {
+      var _this = this
+      this.$android.camera(function (err, imgUrl) {
+        _this.$tools.err('调用相机失败', err)
+        alert(imgUrl)
+      })
+    },
+    tackVideo: function () {
+      alert('tackVideo')
+    },
+    tackText: function () {
+      alert('tackText')
+    }
+  }
 }
 </script>
 
