@@ -1,6 +1,6 @@
 <template>
   <div class="shelter">
-    <div class="shelter_outer"></div>
+    <div class="shelter-outer"></div>
     <img :src="imgUrl" alt="">
   </div>
 </template>
@@ -19,9 +19,9 @@ export default {
 
 <style lang="scss">
 .shelter {
-  .shelter_outer {
+  .shelter-outer {
     width: 100%;
-    height: (999999999999999999999rem/14);
+    height: 100%;
     background-color: #000;
     opacity: 0.5;
     position: fixed;

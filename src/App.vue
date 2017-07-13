@@ -30,7 +30,7 @@ export default {
       title: '',
       // 控制是否出现遮挡层
       // todo: 跑在安卓时, 需要改为true
-      shelterController: true
+      shelterController: false
     }
   },
   created: function () {
