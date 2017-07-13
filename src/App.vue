@@ -30,16 +30,15 @@ export default {
       title: '',
       // 控制是否出现遮挡层
       // todo: 跑在安卓时, 需要改为true
-      shelterController: false
+      shelterController: true
     }
   },
   created: function () {
     var _this = this
+    // var cordova = cordova
     // 视图构建完成, 设备链接完成后, 去掉遮挡层
     document.addEventListener('deviceready', function () {
-      setTimeout(function () {
-        _this.shelterController = false
-      }, 1000)
+      _this.shelterController = false
     }, false)
     // 页面加载完成后, 直接加载时光页面
     this.navChange(0)
