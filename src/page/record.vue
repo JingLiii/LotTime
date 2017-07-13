@@ -1,34 +1,50 @@
 <template>
   <div>
+
     <RecordBox 
+      class="record-record_box"
       v-for="box in Boxs"
       :key="box.title"
-      :title="box.title"
-      :content="box.content"
       :img="box.imgUrl"
+      :title="box.title"
       :eventName='box.event'
-      class="record_box"
+      :content="box.content"
     >
     </RecordBox>
-  <p>{{test}}</p>
+
+    <MyAlert 
+      class="my-alert"
+      :dataObject='alerts'
+      v-on:clickEvent="alertResultFun"
+    >
+    </MyAlert>
+
   </div>
 </template>
 
 <script>
 import RecordBox from '../components/RecordBox'
+import MyAlert from '../components/MyAlert'
 
 import img from '../config/images.js'
 
-var name = 'zhangrh'
-var str = `这 <em>${name}</em> 是一个姓名, ${name}`
-
 export default {
   components: {
-    RecordBox
+    RecordBox,
+    MyAlert
+  },
+  methods: {
+    alertResultFun: function (par) {
+      this.Boxs[0].event = par
+    }
   },
   data () {
     return {
-      test: str,
+      alerts: [
+        {
+          text: '相机'
+        }
+      ],
       Boxs: [
         {
           title: '摄影',
@@ -55,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss">
-.record_box {
+.record-record_box {
   margin: (15rem/14) auto;
   cursor: pointer;
 }

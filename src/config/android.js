@@ -1,5 +1,5 @@
 // 调用相机
-var camera = function (callback) {
+const camera = function (callback) {
   navigator.camera.getPicture(function (imageUrl) {
     callback(null, imageUrl)
   }, function (err) {
@@ -7,6 +7,12 @@ var camera = function (callback) {
   })
 }
 
+// 调用浏览器
+const inAppBrowser = function (callback) {
+  console.log(cordova)
+}
+
 export default {
-  camera: camera
+  camera: camera,
+  inAppBrowser: inAppBrowser
 }
