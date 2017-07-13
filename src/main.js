@@ -18,7 +18,7 @@ Vue.component('icon', Icon)
 import VueRouter from 'vue-router'
 // 使用路由
 Vue.use(VueRouter)
-// 入口文件src/App.vue
+// 入口文件 src/App.vue
 import App from './App.vue'
 // 引入路由配置文件
 import routes from './config/routes'
