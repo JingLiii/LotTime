@@ -5,10 +5,12 @@
       <div class="record-box_left">
         <img v-bind:src="img" alt="">
       </div>
+
       <div class="record-box_right">
         {{title}}
         <p>{{content}}</p>
       </div>
+
     </div>
 
     <div v-if="cameraPicUrl" class="record-box_content">
@@ -29,15 +31,16 @@ export default {
   },
   props: ['title', 'img', 'content', 'eventName'],
   methods: {
-    event: function (par) {
-      // 这里的参数, 是鼠标的对象
-      if (this.eventName === 'tackPic') {
+    event: function (par) { // 这里的参数, 是鼠标的对象
+      if (this.eventName === '相机') {
         // 调起摄像头, 开始拍照
         this.tackPic()
       } else if (this.eventName === 'tackVideo') {
         this.tackVideo()
       } else if (this.eventName === 'tackText') {
         this.tackText()
+      } else if (this.eventName === '本地相册') {
+        this.openLocalAlbum()
       }
     },
     tackPic: function () {
@@ -52,6 +55,9 @@ export default {
     },
     tackText: function () {
       alert('tackText')
+    },
+    openLocalAlbum: function () {
+      alert('打开本地相册')
     }
   }
 }
